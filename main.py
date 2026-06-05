@@ -1,38 +1,39 @@
-#clase persona
-class Persona:
-    nombre = ""
-    edad = 1
-    altura = 0
-    genero = ""
+# person class
+class Person:
+    name = ""
+    age = 1
+    height = 0.0
+    gender = ""
 
-    def __init__(self, att_nombre, att_edad, att_altura, att_genero):
-        self.nombre = att_nombre
-        self.edad = att_edad
-        self.altura = att_altura
-        self.genero = att_genero
+    def __init__(self, name, age, height, gender):
+        self.name = name
+        self.age = age
+        self.height = height
+        self.gender = gender
 
-    def caminar(self):
-        return f"Hola soy {self.nombre} y Estoy caminando..."
-    def hablar(self):
-        return f"Hola soy {self.nombre} y Estoy hablando..."
+    def walk(self):
+        return f"Hello, I'm {self.name} and I am walking..."
 
-personas_encuentadas = []
+    def speak(self):
+        return f"Hello, I'm {self.name} and I am speaking..."
+
+found_people = []
 while True:
-    op = int(input("""Escoge
-             1. Ingresar datos
-             2. Ver listado de personas
-             0. Salir
+    option = int(input("""Choose an option:
+             1. Enter data
+             2. View people list
+             0. Exit
              : """))
-    if op == 0:
+    if option == 0:
         break
-    if op == 1:
-        nombre = input("Ingrese nombre: ")
-        edad = int(input("Ingrese edad: "))
-        altura = float(input("Ingrese altura: "))
-        genero = input("Ingrese genero: ")
+    if option == 1:
+        name = input("Enter name: ")
+        age = int(input("Enter age: "))
+        height = float(input("Enter height: "))
+        gender = input("Enter gender: ")
 
-        persona = Persona(nombre, edad, altura, genero)
-        personas_encuentadas.append(persona)
+        person = Person(name, age, height, gender)
+        found_people.append(person)
     else:
-        for persona in personas_encuentadas:
-            print(persona.nombre)
+        for person in found_people:
+            print(person.name)
