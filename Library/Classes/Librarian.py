@@ -17,19 +17,32 @@ class Librarian(User):
 
     def book_register(self, book: Book):
         try:
-            with open("../database/db_book.json", "r") as file:
+            with open("/home/catrielwsl/Projects/poo/Library/database/db_book.json", "r") as file:
                 books = json.load(file)
         except FileNotFoundError:
             books=[]
         books.append(vars(book))
-        with open("", "w") as file:
+        with open("/home/catrielwsl/Projects/poo/Library/database/db_book.json", "w") as file:
             json.dump(books, file, indent=4)
 
-    def delete_book(self):
-        pass
+    def delete_book(self, ISBN: str):
+        try:
+            with open("/home/catrielwsl/Projects/poo/Library/database/db_book.json", "r") as file:
+                books= json.load(file)
+        except FileNotFoundError:
+            print("Unable to read the file")
+            return False
+        updated_books = [book for book in books if book["ISBN"] != ISBN]
+
+        if len(updated_books) == len(books):
+            print("The book to be deleted was not found")
+            return False
+        with open("/home/catrielwsl/Projects/poo/Library/database/db_book.json", "w") as file:
+            json.dump(updated_books, file, indent=4)
+
+        print("The book was deleted")
+        return True
+
 
 l1 = Librarian("Jesus", "jesus@gmail.com", "admin")
 b1 = Book("ISBN006", "Pride and Prejudice", "Jane Austen", "1813", 1)
-print(vars(l1))
-
-l1.book_register(b1)
