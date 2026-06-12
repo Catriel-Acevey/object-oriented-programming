@@ -1,37 +1,44 @@
 [
-  {
-    "ISN": "ISBN001",
-    "title": "Harry Potter and the Philosopher's Stone",
-    "author": "J.K. Rowling",
-    "publication_year": "1997",
-    "state": 1
-  },
-  {
-    "ISN": "ISBN002",
-    "title": "The Lord of the Rings",
-    "author": "J.R.R. Tolkien",
-    "publication_year": "1954",
-    "state": 1
-  },
-  {
-    "ISN": "ISBN003",
-    "title": "1984",
-    "author": "George Orwell",
-    "publication_year": "1949",
-    "state": 0
-  },
-  {
-    "ISN": "ISBN004",
-    "title": "To Kill a Mockingbird",
-    "author": "Harper Lee",
-    "publication_year": "1960",
-    "state": 1
-  },
-  {
-    "ISN": "ISBN005",
-    "title": "The Great Gatsby",
-    "author": "F. Scott Fitzgerald",
-    "publication_year": "1925",
-    "state": 1
-  }
+    {
+        "ISBN": "ISBN001",
+        "title": "Harry Potter and the Philosopher's Stone",
+        "author": "J.K. Rowling",
+        "publication_year": "1997",
+        "state": 1
+    },
+    {
+        "ISBN": "ISBN002",
+        "title": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "publication_year": "1954",
+        "state": 1
+    },
+    {
+        "ISBN": "ISBN003",
+        "title": "1984",
+        "author": "George Orwell",
+        "publication_year": "1949",
+        "state": 0
+    },
+    {
+        "ISBN": "ISBN004",
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "publication_year": "1960",
+        "state": 1
+    },
+    {
+        "ISBN": "ISBN005",
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "publication_year": "1925",
+        "state": 1
+    },
+    {
+        "ISBN": "ISBN006",
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "publication_year": "1813",
+        "state": 1
+    }
 ]
